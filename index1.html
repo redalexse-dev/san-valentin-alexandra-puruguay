@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>San Valentín</title>
+<style>
+body{
+  background: pink;
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+.container{
+  background: white;
+  width: 90%;
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 20px;
+  border-radius: 20px;
+}
+button{
+  padding: 15px 25px;
+  font-size: 18px;
+  border: none;
+  border-radius: 15px;
+  margin: 10px;
+  cursor: pointer;
+}
+#si{
+  background: hotpink;
+  color: white;
+}
+#no{
+  background: lightgray;
+}
+</style>
+</head>
+
+<body>
+  <div class="container">
+    <h2>¿Quieres ser mi San Valentín,<br>Alexandra Puruguay Salinas?</h2>
+    <button id="si" onclick="aceptar()">Sí 💖</button>
+    <button id="no" onmouseover="mover()">No 😢</button>
+  </div>
+
+<script>
+function aceptar(){
+  alert("💘 Sabía que dirías que sí 💘");
+}
+
+function mover(){
+  const btn = document.getElementById("no");
+  btn.style.position = "absolute";
+  btn.style.top = Math.random()*80 + "%";
+  btn.style.left = Math.random()*80 + "%";
+}
+</script>
+</body>
+</html>
